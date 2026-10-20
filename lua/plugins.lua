@@ -17,6 +17,11 @@ vim.pack.add({
 	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.*") },
 	{ src = "https://github.com/L3MON4D3/LuaSnip" },
 
+	-- Formatting / linting / tool install
+	{ src = "https://github.com/stevearc/conform.nvim" },
+	{ src = "https://github.com/mfussenegger/nvim-lint" },
+	{ src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
+
 	-- Treesitter (uses the current default `main` branch / rewrite API).
 	-- Highlight/indent/fold are enabled per-filetype in the config module.
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
@@ -29,6 +34,20 @@ vim.pack.add({
 	-- UI
 	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
 	{ src = "https://github.com/neanias/everforest-nvim" },
+
+	-- Editing ergonomics
+	{ src = "https://github.com/windwp/nvim-autopairs" },
+	{ src = "https://github.com/echasnovski/mini.surround" },
+	{ src = "https://github.com/echasnovski/mini.ai" },
+
+	-- Git
+	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
+
+	-- Discoverability
+	{ src = "https://github.com/folke/which-key.nvim" },
+
+	-- Motion (on trial — safe to remove; see lua/plugins/flash.lua)
+	{ src = "https://github.com/folke/flash.nvim" },
 
 	-- AI (local, inline FIM)
 	{ src = "https://github.com/ggml-org/llama.vim" },
@@ -55,6 +74,7 @@ require("plugins.colorscheme")
 require("plugins.ui")
 require("plugins.treesitter")
 require("plugins.lsp")
+require("plugins.formatting")
 require("plugins.navigation")
 require("plugins.harpoon")
 require("plugins.oil")
@@ -63,3 +83,7 @@ require("plugins.notes")
 require("plugins.tasks")
 require("plugins.vimtex")
 require("plugins.habits")
+require("plugins.editing")
+require("plugins.git")
+require("plugins.whichkey")
+require("plugins.flash")
